@@ -1,10 +1,10 @@
-# template
+# configurations
 
-The template repository.
+A collection of configurations.
 
 ## Description
 
-Template repository for developing with GitHub.
+This repository gathers configurations to streamline GitHub development.
 
 ## Usage
 
