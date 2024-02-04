@@ -1,6 +1,6 @@
 # configurations
 
-A collection of configurations.
+Collection of configurations.
 
 ## Description
 
