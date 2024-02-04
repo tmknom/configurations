@@ -32,6 +32,8 @@ perf:
 # Adding missing tests or correcting existing tests
 test:
   - head-branch: ["^test"]
+  - changed-files:
+      - any-glob-to-any-file: [".github/workflows/*test*.yml"]
 
 # Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
 build:
@@ -48,3 +50,13 @@ chore:
 # Reverts a previous commit
 revert:
   - head-branch: ["^revert"]
+
+# Changes to metadata files GitHub Actions.
+action:
+  - changed-files:
+      - any-glob-to-any-file: ["action.yml", "**/action.yml"]
+
+# Changes to workflow files GitHub Actions.
+workflows:
+  - changed-files:
+      - any-glob-to-any-file: [".github/workflows/*.yml"]
