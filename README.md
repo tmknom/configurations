@@ -8,7 +8,19 @@ This repository gathers configurations to streamline GitHub development.
 
 ## Usage
 
-N/A
+### yamllint
+
+```shell
+curl -sSL -o .yamllint.yml \
+https://raw.githubusercontent.com/tmknom/configurations/main/yamllint/github-actions.yml
+```
+
+### labeler
+
+```shell
+curl -sSL -o .github/labeler.yml \
+https://raw.githubusercontent.com/tmknom/configurations/main/labeler/conventional-commits.yml
+```
 
 ## Related projects
 
