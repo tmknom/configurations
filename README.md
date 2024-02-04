@@ -10,6 +10,12 @@ This repository gathers configurations to streamline GitHub development.
 
 N/A
 
+## Related projects
+
+- [makefiles](https://github.com/tmknom/makefiles): Collection of Makefiles.
+- [label-workflows](https://github.com/tmknom/label-workflows): Collection of label workflows.
+- [lint-workflows](https://github.com/tmknom/lint-workflows): Collection of lint workflows.
+
 ## License
 
 Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
