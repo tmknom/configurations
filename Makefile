@@ -8,6 +8,10 @@ RELEASE_WORKFLOW ?= release.yml
 # Variables: commands
 GH ?= $(shell \command -v gh 2>/dev/null)
 
+# Targets: Format code
+.PHONY: fmt
+fmt: fmt/yaml ## Format YAML files
+
 # Targets: Release
 .PHONY: release
 release: ## Start release process
