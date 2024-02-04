@@ -8,6 +8,10 @@ RELEASE_WORKFLOW ?= release.yml
 # Variables: commands
 GH ?= $(shell \command -v gh 2>/dev/null)
 
+# Targets: Lint code
+.PHONY: lint
+lint: lint/workflow lint/yaml ## Lint workflow files and YAML files
+
 # Targets: Format code
 .PHONY: fmt
 fmt: fmt/yaml ## Format YAML files
