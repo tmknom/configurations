@@ -16,6 +16,10 @@ N/A
 - [label-workflows](https://github.com/tmknom/label-workflows): Collection of label workflows.
 - [lint-workflows](https://github.com/tmknom/lint-workflows): Collection of lint workflows.
 
+## Release notes
+
+See [GitHub Releases][releases].
+
 ## License
 
 Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
