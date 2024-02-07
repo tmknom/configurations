@@ -1,6 +1,4 @@
 # Include: minimum
-YAMLLINT_CONFIG ?= $(CONFIG_DIR)/yamllint/github-actions.yml
-RELEASE_WORKFLOW ?= release.yml
 -include .makefiles/minimum/Makefile
 .makefiles/minimum/Makefile:
 	@git clone https://github.com/tmknom/makefiles.git .makefiles >/dev/null 2>&1
