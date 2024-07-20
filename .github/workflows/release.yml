@@ -2,7 +2,7 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
-      level:
+      bump-level:
         type: choice
         required: true
         description: Bump up to [patch / minor / major]
@@ -20,6 +20,6 @@ jobs:
   call:
     uses: tmknom/release-workflows/.github/workflows/github-releases.yml@v0
     with:
-      level: ${{ inputs.level }}
+      bump-level: ${{ inputs.bump-level }}
     permissions:
       contents: write
