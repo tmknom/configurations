@@ -31,7 +31,3 @@ https://raw.githubusercontent.com/tmknom/configurations/main/labeler/conventiona
 ## Release notes
 
 See [GitHub Releases][releases].
-
-## License
-
-Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
