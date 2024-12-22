@@ -1,1 +1,7 @@
 version: 2
+
+before:
+  hooks:
+    - go generate ./...
+    - go mod tidy
+    - git --no-pager diff --exit-code go.mod go.sum
