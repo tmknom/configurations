@@ -8,3 +8,25 @@ before:
 
 gomod:
   proxy: true
+
+builds:
+  - main: ./cmd/{{ .ProjectName }}
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+      - -X main.name={{ .ProjectName }}
+      - -X main.version={{ .Version }}
+      - -X main.commit={{ .FullCommit }}
+      - -X main.date={{ .CommitDate }}
+      - -X main.url={{ .GitURL }}
+    mod_timestamp: "{{ .CommitTimestamp }}"
