@@ -80,3 +80,13 @@ dockers:
       - "--label=org.opencontainers.image.documentation={{ .GitURL }}/blob/main/README.md"
       - "--label=org.opencontainers.image.licenses=Apache-2.0"
       - "--platform=linux/arm64"
+
+docker_manifests:
+  - name_template: "ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/{{ .ProjectName }}:{{ .Tag }}"
+    image_templates:
+      - "ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/{{ .ProjectName }}:{{ .Tag }}-amd64"
+      - "ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/{{ .ProjectName }}:{{ .Tag }}-arm64"
+  - name_template: "ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/{{ .ProjectName }}:latest"
+    image_templates:
+      - "ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/{{ .ProjectName }}:{{ .Tag }}-amd64"
+      - "ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/{{ .ProjectName }}:{{ .Tag }}-arm64"
