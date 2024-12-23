@@ -90,3 +90,6 @@ docker_manifests:
     image_templates:
       - "ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/{{ .ProjectName }}:{{ .Tag }}-amd64"
       - "ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/{{ .ProjectName }}:{{ .Tag }}-arm64"
+
+changelog:
+  use: github-native
