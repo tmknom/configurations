@@ -30,3 +30,9 @@ builds:
       - -X main.date={{ .CommitDate }}
       - -X main.url={{ .GitURL }}
     mod_timestamp: "{{ .CommitTimestamp }}"
+
+archives:
+  - format: binary
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    builds_info:
+      mtime: "{{ .CommitDate }}"
