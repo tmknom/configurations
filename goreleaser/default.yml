@@ -93,3 +93,31 @@ docker_manifests:
 
 changelog:
   use: github-native
+
+release:
+  mode: append
+  draft: true
+  footer: |
+    ---
+
+    ## Installation
+
+    Packages downloaded from {{ .Env.GITHUB_SERVER_URL }}/{{ .Env.GITHUB_REPOSITORY }}/releases/ are considered official binaries.
+
+    ### Binary files
+
+    ```shell
+    gh release download v{{ .Version }}
+    ```
+
+    ### Container images
+
+    ```shell
+    docker pull ghcr.io/{{ .Env.GITHUB_REPOSITORY }}:v{{ .Version }}
+    ```
+
+    ## Verification
+
+    ```shell
+    sha256sum --ignore-missing -c "{{ .ProjectName }}_{{ .Version }}_checksums.txt"
+    ```
