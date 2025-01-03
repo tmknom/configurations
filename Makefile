@@ -15,4 +15,4 @@ fmt: fmt/yaml ## Format YAML files
 
 # Targets: Release
 .PHONY: release
-release: release/start ## Start release process
+release: release/run ## Start release process
