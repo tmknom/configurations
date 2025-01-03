@@ -31,3 +31,5 @@ https://raw.githubusercontent.com/tmknom/configurations/main/labeler/conventiona
 ## Release notes
 
 See [GitHub Releases][releases].
+
+[releases]: https://github.com/tmknom/configurations/releases
