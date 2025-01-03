@@ -117,6 +117,14 @@ docker_signs:
       - --yes
       - ${artifact}@${digest}
 
+sboms:
+  - id: binary
+    artifacts: binary
+    documents:
+      - "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}.sbom.json"
+  - id: package
+    artifacts: package
+
 changelog:
   use: github-native
 
