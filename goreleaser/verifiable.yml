@@ -49,6 +49,24 @@ nfpms:
       - rpm
       - apk
 
+brews:
+  - repository:
+      owner: "{{ .Env.GITHUB_REPOSITORY_OWNER }}"
+      name: "{{ if isEnvSet \"HOMEBREW_TAP_REPOSITORY\" }}{{ .Env.HOMEBREW_TAP_REPOSITORY }}{{ else }}homebrew-tap{{ end }}"
+      branch: update/{{ .ProjectName }}_{{ .Version }}
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+      pull_request:
+        enabled: true
+    commit_author:
+      name: github-actions[bot]
+      email: 41898282+github-actions[bot]@users.noreply.github.com
+    directory: Formula
+    homepage: "{{ .GitURL }}"
+    description: "{{ .ProjectName }} {{ .Version }}"
+    license: Apache-2.0
+    test: |
+      system "#{bin}/{{ .ProjectName }} --version"
+
 checksum:
   name_template: "{{ .ProjectName }}_{{ .Version }}_checksums.txt"
   algorithm: sha256
