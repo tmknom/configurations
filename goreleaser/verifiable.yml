@@ -106,6 +106,17 @@ signs:
       - --yes
       - ${artifact}
 
+docker_signs:
+  - cmd: cosign
+    artifacts: all
+    output: true
+    args:
+      - sign
+      - --oidc-issuer=https://token.actions.githubusercontent.com
+      - --oidc-provider=github-actions
+      - --yes
+      - ${artifact}@${digest}
+
 changelog:
   use: github-native
 
