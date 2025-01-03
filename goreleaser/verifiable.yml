@@ -37,6 +37,18 @@ archives:
     builds_info:
       mtime: "{{ .CommitDate }}"
 
+nfpms:
+  - package_name: "{{ .ProjectName }}"
+    file_name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Arch }}"
+    homepage: "{{ .GitURL }}"
+    maintainer: "{{ .Env.GITHUB_REPOSITORY_OWNER }} {{ .Env.GITHUB_REPOSITORY_OWNER_ID }}+{{ .Env.GITHUB_REPOSITORY_OWNER }}@users.noreply.github.com"
+    description: "{{ .ProjectName }} {{ .Version }}"
+    license: "Apache License 2.0"
+    formats:
+      - deb
+      - rpm
+      - apk
+
 checksum:
   name_template: "{{ .ProjectName }}_{{ .Version }}_checksums.txt"
   algorithm: sha256
