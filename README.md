@@ -22,6 +22,13 @@ curl -sSL -o .github/labeler.yml \
 https://raw.githubusercontent.com/tmknom/configurations/main/labeler/conventional-commits.yml
 ```
 
+### GoReleaser
+
+```shell
+curl -sSL -o .goreleaser.yml \
+https://raw.githubusercontent.com/tmknom/configurations/main/goreleaser/default.yml
+```
+
 ## Related projects
 
 - [makefiles](https://github.com/tmknom/makefiles): Collection of Makefiles.
